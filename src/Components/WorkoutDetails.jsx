@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 
 const API = import.meta.env.VITE_API_URL
 
@@ -33,7 +33,9 @@ const WorkoutDetails = () => {
       <h1>WorkoutDetails</h1>
       <p>{workout.type}</p>
       <p>{workout.durationInMinutes}</p>
-      <button>Edit</button>
+      <Link to={`workouts/${id}/edit`}>
+        <button>Edit</button>
+      </Link>
       <button>Delete</button>
     </div>
   )
