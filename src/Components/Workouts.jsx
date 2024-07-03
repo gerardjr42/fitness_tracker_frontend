@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Workout from './Workout'
 
 //Import our local host API and save it to a variable
 
@@ -23,7 +24,7 @@ const Workouts = () => {
     <div>
       <h1>Workouts</h1>
       {workouts.map(workout => {
-        return <p>{workout.type}</p>
+        return <Workout key={workout.id} workout={workout}/>
       })}
     </div>
   )

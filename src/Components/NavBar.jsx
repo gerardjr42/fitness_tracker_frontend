@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
   return (
     <div>NavBar
+      <Link to="/workouts">Index</Link>
       <button>
         <Link to="/workouts/new">
           New Workout
